@@ -85,7 +85,7 @@ public class TreeProblems {
   */
   public static int sumTree(Node<Integer> root) {
     if (root == null) return 0;
-    
+
     int sum = root.value;
     for (Node<Integer> child : root.children) {
       sum += sumTree(child);
@@ -113,7 +113,13 @@ public class TreeProblems {
    Hint: There's a simple way to do this!
   */
   public static int sumTree(Map<Integer, List<Integer>> tree) {
-    return -1;
+    if (tree == null) return 0;
+
+    int sum = 0;
+    for(Integer node : tree.keySet()) {
+      sum += node;
+    }
+    return sum;
   }
 
   /*
